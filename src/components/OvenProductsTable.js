@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { addInvoice } from "../db";
 
 export default function OvenProductsTable({ oven }) {
-  const [quantity, setQuantity] = useState({});
-  const [products, setProducts] = useState(oven.products || []);
+ const [quantity, setQuantity] = useState({});
+ const [products] = useState(oven.products || []); // removed setProducts since it's unused
   const [showInvoices, setShowInvoices] = useState(false);
   const navigate = useNavigate();
   const [price, setPrice] = useState({});
